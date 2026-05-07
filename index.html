@@ -75,46 +75,32 @@
     }
 
     /* QR section */
-    .qr-section {
-      margin-top: 40px;
+.qr-section {
+  margin-top: 40px;
 
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 16px;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
 
-    .qr-code {
-      width: 140px;
-      height: 140px;
+.qr-image {
+  width: 140px;
+  height: 140px;
 
-      background:
-        linear-gradient(90deg,
-          #fff 10%, #000 10%, #000 20%, #fff 20%, #fff 30%,
-          #000 30%, #000 40%, #fff 40%, #fff 50%, #000 50%,
-          #000 60%, #fff 60%, #fff 70%, #000 70%, #000 80%,
-          #fff 80%, #fff 90%, #000 90%
-        ),
-        linear-gradient(
-          #fff 10%, #000 10%, #000 20%, #fff 20%, #fff 30%,
-          #000 30%, #000 40%, #fff 40%, #fff 50%, #000 50%,
-          #000 60%, #fff 60%, #fff 70%, #000 70%, #000 80%,
-          #fff 80%, #fff 90%, #000 90%
-        );
+  object-fit: cover;
 
-      background-size: 28px 28px;
+  border: 8px solid white;
+  border-radius: 12px;
 
-      border: 8px solid white;
-      border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.45);
+}
 
-      box-shadow: 0 10px 40px rgba(0,0,0,0.45);
-    }
-
-    .qr-text {
-      font-size: 1rem;
-      letter-spacing: 0.02em;
-      color: rgba(255,255,255,0.92);
-    }
+.qr-text {
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.92);
+}
 
     .section {
       min-height: 100vh;
@@ -164,10 +150,15 @@
 
       <div class="qr-section">
         <div class="qr-code"></div>
-
-        <div class="qr-text">
-          Scan to download the new app
-        </div>
+        <div class="qr-text">Scan to download the new app</div>
+      </div>
+      <div class="qr-section">
+        <img
+          class="qr-image"
+          src="YOUR_QR_IMAGE_URL_HERE"
+          alt="QR Code"
+          />
+        <div class="qr-text">Scan to download the new app</div>
       </div>
     </div>
   </section>
